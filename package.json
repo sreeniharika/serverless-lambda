@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "offline": "sls offline start --skipCacheInvalidation"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1185.0",
+    "dotenv": "^16.0.1",
+    "mongoose": "^6.5.0",
+    "serverless-http": "^3.0.1"
+  },
+  "devDependencies": {
+    "serverless-offline": "^9.1.3"
+  }
+}

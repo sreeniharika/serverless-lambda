@@ -1,0 +1,49 @@
+service: videos
+
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  region: us-east-1  
+  
+
+functions:
+  create:
+     handler: handler.create
+     events:
+       - http:
+           path: videos
+           method: post
+           cors: true
+  getOne:
+     handler: handler.getOne 
+     events:
+       - http:
+           path: videos/{id}
+           method: get
+           cors: true
+  getAll:
+    handler: handler.getAll
+    events:
+     - http:
+         path: videos
+         method: get
+         cors: true         
+
+  
+
+plugins:
+ -serverless-offline      
+    
+
+
+
+
+
+
+
+
+
+
+
+  
